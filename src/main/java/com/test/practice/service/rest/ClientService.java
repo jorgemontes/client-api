@@ -9,8 +9,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.test.practice.persistence.dao.ClientDAO;
-import com.test.practice.persistence.entity.Client;
+import com.test.practice.ClientDAO;
+import com.test.practice.persistence.Client;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,7 +29,6 @@ public class ClientService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@ApiOperation(value = "Get All clients")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "OK"), @ApiResponse(code = 500, message = "UhOh") })
-
 	public List<Client> getAllClients() {
 		return this.clientDAO.getAllClients();
 	}
