@@ -7,6 +7,15 @@ import javax.persistence.Id;
 
 @Entity
 public class Client implements Serializable {
+
+	public Client(String id, String name, int age, String address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.address = address;
+	}
+
 	@Id
 	private String id;
 	private String name;
