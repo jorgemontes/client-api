@@ -1,4 +1,4 @@
-package com.test.practice.persistence.entity;
+package com.test.practice.ejb.persistence.entity;
 
 import java.io.Serializable;
 

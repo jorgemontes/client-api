@@ -1,4 +1,4 @@
-package com.test.practice.persistence.dao;
+package com.test.practice.ejb.persistence.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.test.practice.persistence.entity.Client;
+import com.test.practice.ejb.persistence.entity.Client;
 
 @Stateless
 public class ClientDAO {
