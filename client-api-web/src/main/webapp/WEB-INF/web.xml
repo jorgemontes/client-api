@@ -26,6 +26,7 @@
 	<servlet>
 		<servlet-name>ClientFormServlet</servlet-name>
 		<servlet-class>com.test.practice.web.servlet.ClientFormServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ClientFormServlet</servlet-name>

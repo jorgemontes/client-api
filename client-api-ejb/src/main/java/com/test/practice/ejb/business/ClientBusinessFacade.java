@@ -2,6 +2,7 @@ package com.test.practice.ejb.business;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
@@ -26,5 +27,10 @@ public class ClientBusinessFacade {
 			this.clientDAO.saveClient(client);
 		}
 
+	}
+
+	@PostConstruct
+	public void postConstruc() {
+		System.out.println("---------------------");
 	}
 }

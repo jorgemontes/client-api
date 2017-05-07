@@ -2,6 +2,7 @@ package com.test.practice.ejb.persistence.dao;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,6 +29,11 @@ public class ClientDAO {
 
 	public List<Client> getAllClients() {
 		return this.entityManager.createQuery("from " + Client.class.getSimpleName()).getResultList();
+	}
+
+	@PostConstruct
+	public void postConstruc() {
+		System.out.println("ccccccccccccccccccccccc");
 	}
 
 }

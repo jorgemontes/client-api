@@ -47,6 +47,16 @@
 			<artifactId>jersey-common</artifactId>
 			<version>2.26-b03</version>
 		</dependency>
+		  <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.26-b03</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.26-b03</version>
+        </dependency>
 	</dependencies>
 	 <properties>
         <java.min.version>1.7</java.min.version>
