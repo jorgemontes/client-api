@@ -28,7 +28,8 @@ public class ClientDAO {
 	}
 
 	public List<Client> getAllClients() {
-		return this.entityManager.createQuery("from " + Client.class.getSimpleName()).getResultList();
+		List<Client> clients = this.entityManager.createQuery("from " + Client.class.getSimpleName()).getResultList();
+		return clients;
 	}
 
 	@PostConstruct

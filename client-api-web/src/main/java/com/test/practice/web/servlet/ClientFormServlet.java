@@ -19,11 +19,10 @@ public class ClientFormServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String name = (String) req.getAttribute("name");
-		String id = (String) req.getAttribute("id");
-		int age = Integer.getInteger((String) req.getAttribute("age"));
-		String address = (String) req.getAttribute("address");
-
+		String name = req.getParameter("name");
+		String id = req.getParameter("id");
+		int age = Integer.parseInt(req.getParameter("age"));
+		String address = req.getParameter("address");
 		Client client = new Client(id, name, age, address);
 		this.clientBusinessFacade.createOrUpdateClient(client);
 		super.doPost(req, resp);

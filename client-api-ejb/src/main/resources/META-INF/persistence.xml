@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
-  <persistence-unit name="clientPersistenceUnit">
-    <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>com.test.practice.persistence.entity.Client</class>
-    <properties>
-	   <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
-	   <property name="hibernate.connection.username" value=""/>
-	   <property name="hibernate.connection.password" value=""/>
-	   <property name="hibernate.connection.url" value="jdbc:h2:~/client-api"/>   
-	   <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
-	   <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-	   <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-	</properties>
-  </persistence-unit>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="clientPersistenceUnit" transaction-type="JTA" >
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.test.practice.persistence.entity.Client</class>
+		<properties>
+			<property name="hibernate.connection.driver_class" value="org.h2.Driver" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url" value="jdbc:h2:~/client-api" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			<property name="hibernate.transaction.jta.platform"
+				value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
+			<property name="hibernate.default_schema" value="PUBLIC" />
+			<property name="show_sql" value="true" />
+		</properties>
+	</persistence-unit>
 </persistence>
 
